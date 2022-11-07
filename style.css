@@ -68,6 +68,7 @@ h1 {
 p.opis {
     text-align-last: center;
     width: 100vh;
+    max-width: 100vh;
     border-radius: 20px;
     box-shadow: 0 0 20px #65449B;
     font-family: 'Overpass', sans-serif;
@@ -92,6 +93,7 @@ footer {
 
 form {
     width: 100vh;
+    max-width: 100vh;
     border-radius: 20px;
     box-shadow: 0 0 20px #65449B;
     font-family: 'Overpass', sans-serif;
@@ -103,6 +105,7 @@ form {
 
 #projekty {
     width: 100vh;
+    max-width: 100vh;
     border-radius: 20px;
     box-shadow: 0 0 20px #65449B;
     padding: 10%;
