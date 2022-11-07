@@ -1,1 +1,0 @@
-# Praktyki4P
