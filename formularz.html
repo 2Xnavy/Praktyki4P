@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro:900|Overpass" rel="stylesheet">
     <title>mission imposible</title>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -39,22 +40,38 @@
         <form class="form">
             <div class="field">
                 <label for="" class="pole">IMIE</label>
-                <input type="text" placeholder=" " pattern="[A-Za-z]{2,99}" required>
+                <input id="imie" type="text" placeholder="np. Imie" pattern="[A-Za-z]{2,99}" required>
             </div>
             <div class="field">
                 <label for="" class="pole">NAZWISKO</label>
-                <input type="text" placeholder=" " pattern="[A-Za-z]{2,99}" required>
+                <input id="nazwisko" type="text" placeholder="np. Nazwisko" pattern="[A-Za-z]{2,99}" required>
             </div>
             <div class="field">
                 <label for="" class="pole">WIEK</label>
-                <input type="number" placeholder=" " min="1" max="100" required>
+                <input id="wiek" id="nazwisko" type="number" placeholder="np. 20" min="1" max="100" required>
             </div>
             <div class="field">
                 <label for="" class="pole">EMAIL ADRESS</label>
-                <input type="email" placeholder=" " pattern="[a-zA-Z0-9-]{3,}@[a-zA-Z0-9-]{3,}[.]{1}[a-zA-Z]{2,}" required>
+                <input id="email" type="email" placeholder="np. abc@de.fg" pattern="[a-zA-Z0-9-]{3,}@[a-zA-Z0-9-]{2,}[.]{1}[a-zA-Z]{2,}" required>
+            </div>
+            <div class="field">
+                <label for="gender">PŁEĆ:</label>
+                <select id="gender" name="gender" required>
+                    <option hidden disabled selected value>-- wybierz --</option>
+                    <option>Kobieta</option>
+                    <option>Mężczyzna</option>
+                </select>
+            </div>
+            <div class="field skinChoice">
+                <label for="white" class="skinLabel">KOLOR SKÓRY:</label>
+                    <input type="radio" id="white" value="white" name="skinColor" required checked>
+                    <input type="radio" id="yellow" value="yellow" name="skinColor" required>
+                    <input type="radio" id="brown" value="brown" name="skinColor" required>
+                    <input type="radio" id="black" value="black" name="skinColor" required>
+                    <input type="radio" id="red" value="red" name="skinColor" required>
             </div>
             <div class="button">
-                <button type="submit">WYŚLIJ</button>
+                <button type="submit" onclick="showAlert()">WYŚLIJ</button>
             </div>
         </form>
     </container>
