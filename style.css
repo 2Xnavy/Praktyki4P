@@ -157,3 +157,37 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.skinChoice {
+    margin-top: 3px;
+}
+
+.skinLabel {
+    position: relative;
+    top: -4px;
+}
+
+input[type=radio] {
+    width: 0.5cm;
+    height: 0.5cm;
+}
+
+#white {
+    accent-color: #eeddd0;
+}
+
+#yellow {
+    accent-color: #e2dd9b;
+}
+
+#brown {
+    accent-color: #926b52;
+}
+
+#black {
+    accent-color: #3f1d0a;
+}
+
+#red {
+    accent-color: #be4c1e;
+}
