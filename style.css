@@ -16,7 +16,7 @@ body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 70px;
 }
 
 #menu {
@@ -67,12 +67,12 @@ h1 {
 
 p.opis {
     text-align-last: center;
-    width: 85%;
+    width: 100vh;
     border-radius: 20px;
     box-shadow: 0 0 20px #65449B;
     font-family: 'Overpass', sans-serif;
     padding: 3%;
-    margin: 4%;
+    margin: auto;
 }
 
 h2 {
@@ -85,20 +85,33 @@ img {
 
 footer {
     background-color: black;
-    height: 25px;
+    height: 70px;
     width: 100%;
     clear: both;
 }
 
 form {
-    width: 50%;
+    width: 100vh;
     border-radius: 20px;
     box-shadow: 0 0 20px #65449B;
     font-family: 'Overpass', sans-serif;
     padding: 3%;
     margin: 4%;
     text-align: center;
-    margin-left: 20%;
+    margin: auto;
+}
+
+#projekty {
+    width: 100vh;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #65449B;
+    padding: 10%;
+    margin: 15%;
+    text-align: center;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    margin-bottom: 10%;
 }
 
 .projekt {
@@ -109,8 +122,9 @@ form {
     box-shadow: 0 0 20px #65449B;
     font-family: 'Overpass', sans-serif;
     float: left;
-    margin: 4%;
-    padding: 7%;
+    position: static;
+    margin: 3%;
+    padding: 10%;
 }
 
 button {
