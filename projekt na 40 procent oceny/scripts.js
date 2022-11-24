@@ -1,0 +1,4 @@
+function someAlert(){
+    alert("IDK");
+}
+
