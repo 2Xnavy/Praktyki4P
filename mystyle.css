@@ -60,3 +60,94 @@ body {
     outline: none;
     font-weight: bold;
 }
+
+.karuzelaFilmow {
+    padding: 0 20px;
+}
+
+.opakowanie {
+    position: relative;
+    overflow: hidden;
+}
+
+.listaFilmow {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.film {
+    margin-right: 30px;
+    position: relative;
+}
+
+.film:hover .filmImg {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.film:hover .tytulFilmu,
+.film:hover .opisFilmuKaruzela,
+.film:hover .przyciskKaruzela {
+    opacity: 1;
+}
+
+.filmImg {
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.tytulFilmu {
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.opisFilmuKaruzela {
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.przyciskKaruzela {
+    padding: 10px;
+    background-color: #c85fa6;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.strzalka {
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+}
