@@ -1,36 +1,59 @@
+<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mystyle.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <title>Movie Design</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Design</title>
+        <link rel="stylesheet" href="mystyle.css">
+        <script src="myscript.js"></script>
+    </head>
 
-<body>
-    <!--lewe menu, ikony pobrane ze stronki fontawesome, można je zmienić-->
-    <div class="lewemenu">
-        <i class="ikonki fas fa-search"></i>
-        <i class="ikonki fas fa-home"></i>
-        <i class="ikonki fas fa-tv"></i>
-    </div>
+    <body>
+        <!-- Ikona otwierająca panel wyszukiwarki -->
+        <img class="searchButton" src="images/search.png">
 
+        <!--lewe menu, ikony pobrane ze stronki fontawesome, można je zmienić-->
+        <nav>
+            <img class="menuLogo" src="images/original.png">
 
+            <img class="menuIcon" src="images/houseW.png">
+            <img class="menuIcon" src="images/trending-topicW.png">
+            <img class="menuIcon" src="images/video-libraryW.png">
+            <img class="menuIcon" src="images/plusW.png">
 
-    <div class="container">
-        <div class="content-container">
-            <!--tutaj sie ogarnia ten główny film który widać na pół strony-->
-            <div class="nowyfilm" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('sf.jpg');">
-                <p class="opisfilmu">superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm superfilm </p>
-                <button class="przyciskglowny">READ MORE</button>
+            <img class="socialMediaIcon" src="images/twitterW.png">
+            <img class="socialMediaIcon" src="images/discordW.png">
+        </nav>
+
+        <!-- Część strony 'home' -->
+        <main>
+            <div class="homeBackground">
+                <img class="hotShowIcon" src="images/burnIDK.png">
+                <p class="hotShowText">HOT SHOW</p>
+                <p class="hotShowTitle">STRANGER<span class="nextLineHotShowTitle"></span>THINGS</p>
+                <p class="hotShowDescription">
+                    When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl. Watch all you want. This nostalgic nod to '80s sci-fi and horror classics has earned dozens of Emmy nominations, including three for Outstanding Drama.
+                </p>
+                <p class="hotShowInfo">Director: Shawn Levy
+                    <span class="nextLineHotShowInfo"></span>
+                    Actors: Millie Bobby Brown, Finn Wolfhard, Sadie Sink...
+                    <span class="nextLineHotShowInfo"></span>
+                    Premiere: 16.06.2016
+                </p>
+
+                <img class="hotShowStar" src="images/star.png"></img>
+                <img class="hotShowStar" src="images/star.png"></img>
+                <img class="hotShowStar" src="images/star.png"></img>
+                <img class="hotShowStar" src="images/starHalf.png"></img>
+                <img class="hotShowStar" src="images/starW.png"></img>
+                <p class="hotShowRatingText">( 2.01M Reviews )</p>
+                <p><span class="hotShowReadMore">READ MORE</span></p>
             </div>
 
-        </div>
-        <script src="myscript.js"></script>
-    </div>
-</body>
+        <main>
+    </body>
 
 </html>
+

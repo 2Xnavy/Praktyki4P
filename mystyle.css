@@ -1,62 +1,184 @@
-* {
-    margin: 0;
+/* Chwoam scrollbary, bo tak jest ładniej */
+::-webkit-scrollbar{
+    display: none;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    font-family: InterLight; /* Ustawiam samemu dodany font dla całej strony */
+    color: white;
 }
 
+p{
+    margin: 0%;
+    padding: 0%;
+}
 
-/*lewe menu*/
+.searchButton{
+    position: fixed;
+    z-index: 10;
+    left: 92vw;
+    top: 7vh;
+    width: 2.8cm;
+    height: auto;
+    opacity: 80%;
+}
 
-.lewemenu {
-    width: 50px;
+/* Sekcja z menu strony */
+nav{
+    width: 7vw;
     height: 100%;
     background-color: black;
     position: fixed;
     top: 0;
+    z-index: 10;
+}
+.menuLogo{ /* Logo strony w menu */
+    width: auto;
+    height: 2cm;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5vh;
+}
+.menuIcon{ /* Inne obrazki w menu */
+    width: 0.7cm;
+    height: 0.7cm;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 17vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
+    margin-top: 12vh;
+}
+.socialMediaIcon{
+    width: 0.7cm;
+    height: 0.7cm;
+    position: relative;
+    left: 30%;
+    transform: translateX(-30%);
+    top: 37vh;
+    margin-right: 18%;
 }
 
-.ikonki {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 100px;
-}
-
-.container {
+/* Sekcja główna strony */
+main{
+    width: 100%;
+    height: 6000px;
+    position: relative;
     background-color: #151515;
-    min-height: calc(100vh - 50px);
+    z-index: 0;
     color: white;
+    background-image: linear-gradient(to left, rgba(0,0,0,0) 60%, #000000), url('images/sitebg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.homeBackground{ /* Tło sekcji 'home' */
+    height: 100%;
+    width: auto;
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+    z-index: 2;
+    background-image: url('images/editbg11.png');
+    background-repeat: no-repeat;
 }
 
-.content-container {
-    margin-left: 50px;
+.hotShowIcon{
+    width: 1cm;
+    height: 1cm;
+    position: absolute;
+    left: 10vw;
+    top: 7.5vh;
+}
+.hotShowText{
+    position: absolute;
+    left: 12vw;
+    top: 7.7vh;
+    font-size: 0.8cm;
+    opacity: 80%;
 }
 
-
-/*tutaj sie ogarnia ten główny film który widać na pół strony*/
-
-.nowyfilm {
-    height: 50vh;
-    padding: 50px;
+.hotShowTitle{
+    position: absolute;
+    left: 10vw;
+    top: 9vh;
+    font-family: IMFell;
+    font-size: 5cm;
+    text-align: center;
+    color: #AB2626;
+    -webkit-text-stroke: 2.5px black;
+    opacity: 70%;
+    letter-spacing: -20px;
+}
+.nextLineHotShowTitle{
+    display: block;
+    margin-bottom: -2cm;    
 }
 
-.opisfilmu {
-    width: 500px;
-    color: lightgray;
-    margin: 30px 0;
+.hotShowDescription{
+    position: absolute;
+    left: 10vw;
+    top: 39vh;
+    text-align: left;
+    width: 24cm;
+    font-size: 0.9cm;
+    opacity: 80%;
 }
 
-.przyciskglowny {
-    background-color: #c85fa6;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-weight: bold;
+.hotShowInfo{
+    position: absolute;
+    left: 10vw;
+    top: 67vh;
+    font-size: 0.7cm;
+    opacity: 80%;
+}
+.nextLineHotShowInfo{
+    display: block;
+    margin-bottom: -1.8cm;    
+}
+
+.hotShowStar{
+    width: 2cm;
+    height: auto;
+    opacity: 80%;
+    margin: 0px 0.8cm 0px 0.8cm;
+    position: relative;
+    top: 71vh;
+    left: 14.3vw;
+}
+.hotShowRatingText{
+    position: absolute;
+    font-size: 0.8cm;
+    opacity: 80%;
+    position: absolute;
+    top: 79vh;
+    left: 25vw;
+}
+.hotShowReadMore{
+    position: absolute;
+    top: 84vh;
+    left: 10vw;
+    font-size: 1.4cm;
+    background-image: linear-gradient(90deg, #98ACC0, #B089BF, #BF97C0);
+    width: 18cm;
+    text-align: center;
+    padding: 0.3cm 2.6cm 0.3cm 2.6cm;
+    border-radius: 0.5cm;
+}
+
+/* Poniżej dodaje własne fonty z folderu 'fonts': */
+@font-face {
+    font-family: InterLight;
+    src: url(fonts/Inter-Light.ttf);
+}
+@font-face {
+    font-family: IMFell;
+    src: url(fonts/IMFellGreatPrimerSC-Regular.ttf);
 }
