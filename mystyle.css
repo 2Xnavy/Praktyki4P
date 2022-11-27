@@ -1,23 +1,24 @@
 /* Chwoam scrollbary, bo tak jest ładniej */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
     margin: 0%;
     padding: 0%;
-    font-family: InterLight; /* Ustawiam samemu dodany font dla całej strony */
+    font-family: InterLight;
+    /* Ustawiam samemu dodany font dla całej strony */
     color: white;
 }
 
-p{
+p {
     margin: 0%;
     padding: 0%;
 }
 
-.searchButton{
+.searchButton {
     position: fixed;
     z-index: 10;
     left: 92vw;
@@ -28,7 +29,7 @@ p{
 }
 
 /* Sekcja z menu strony */
-nav{
+nav {
     width: 7vw;
     height: 100%;
     background-color: black;
@@ -36,7 +37,9 @@ nav{
     top: 0;
     z-index: 10;
 }
-.menuLogo{ /* Logo strony w menu */
+
+.menuLogo {
+    /* Logo strony w menu */
     width: auto;
     height: 2cm;
     position: absolute;
@@ -44,7 +47,9 @@ nav{
     transform: translateX(-50%);
     top: 5vh;
 }
-.menuIcon{ /* Inne obrazki w menu */
+
+.menuIcon {
+    /* Inne obrazki w menu */
     width: 0.7cm;
     height: 0.7cm;
     position: relative;
@@ -55,7 +60,8 @@ nav{
     flex-direction: column;
     margin-top: 12vh;
 }
-.socialMediaIcon{
+
+.socialMediaIcon {
     width: 0.7cm;
     height: 0.7cm;
     position: relative;
@@ -66,20 +72,22 @@ nav{
 }
 
 /* Sekcja główna strony */
-main{
+main {
     width: 100%;
     height: 6000px;
     position: relative;
     background-color: #151515;
     z-index: 0;
     color: white;
-    background-image: linear-gradient(to left, rgba(0,0,0,0) 60%, #000000), url('images/sitebg.png');
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 60%, #000000), url('images/sitebg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     overflow: hidden;
 }
-.homeBackground{ /* Tło sekcji 'home' */
+
+.homeBackground {
+    /* Tło sekcji 'home' */
     height: 100%;
     width: auto;
     margin: 0%;
@@ -90,14 +98,15 @@ main{
     background-repeat: no-repeat;
 }
 
-.hotShowIcon{
+.hotShowIcon {
     width: 1cm;
     height: 1cm;
     position: absolute;
     left: 10vw;
     top: 7.5vh;
 }
-.hotShowText{
+
+.hotShowText {
     position: absolute;
     left: 12vw;
     top: 7.7vh;
@@ -105,7 +114,7 @@ main{
     opacity: 80%;
 }
 
-.hotShowTitle{
+.hotShowTitle {
     position: absolute;
     left: 10vw;
     top: 9vh;
@@ -117,12 +126,13 @@ main{
     opacity: 70%;
     letter-spacing: -20px;
 }
-.nextLineHotShowTitle{
+
+.nextLineHotShowTitle {
     display: block;
-    margin-bottom: -2cm;    
+    margin-bottom: -2cm;
 }
 
-.hotShowDescription{
+.hotShowDescription {
     position: absolute;
     left: 10vw;
     top: 39vh;
@@ -132,19 +142,20 @@ main{
     opacity: 80%;
 }
 
-.hotShowInfo{
+.hotShowInfo {
     position: absolute;
     left: 10vw;
     top: 67vh;
     font-size: 0.7cm;
     opacity: 80%;
 }
-.nextLineHotShowInfo{
+
+.nextLineHotShowInfo {
     display: block;
-    margin-bottom: -1.8cm;    
+    margin-bottom: -1.8cm;
 }
 
-.hotShowStar{
+.hotShowStar {
     width: 2cm;
     height: auto;
     opacity: 80%;
@@ -153,7 +164,8 @@ main{
     top: 71vh;
     left: 14.3vw;
 }
-.hotShowRatingText{
+
+.hotShowRatingText {
     position: absolute;
     font-size: 0.8cm;
     opacity: 80%;
@@ -161,7 +173,8 @@ main{
     top: 79vh;
     left: 25vw;
 }
-.hotShowReadMore{
+
+.hotShowReadMore {
     position: absolute;
     top: 84vh;
     left: 10vw;
@@ -173,12 +186,116 @@ main{
     border-radius: 0.5cm;
 }
 
-/* Poniżej dodaje własne fonty z folderu 'fonts': */
-@font-face {
-    font-family: InterLight;
-    src: url(fonts/Inter-Light.ttf);
-}
-@font-face {
-    font-family: IMFell;
-    src: url(fonts/IMFellGreatPrimerSC-Regular.ttf);
-}
+
+
+
+    .przyciskglowny {
+        background-color: #c85fa6;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-weight: bold;
+    }
+
+    .karuzelaFilmow1, .karuzelaFilmow2, .karuzelaFilmow3 {
+        padding: 0 20px;
+        position: absolute;
+        left: 10vw;
+        top: 110vh;
+        z-index: 500;
+    }
+        .karuzelaFilmow2{
+            top: 140vh;
+        }
+        .karuzelaFilmow3{
+            top: 170vh;
+        }
+
+    .opakowanie {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .listaFilmow {
+        display: flex;
+        align-items: center;
+        height: 300px;
+        transform: translateX(0);
+        transition: all 1s ease-in-out;
+    }
+
+    .film {
+        margin-right: 30px;
+        position: relative;
+    }
+
+    .film:hover .filmImg {
+        transform: scale(1.2);
+        margin: 0 30px;
+        opacity: 0.5;
+    }
+
+    .film:hover .tytulFilmu,
+    .film:hover .opisFilmuKaruzela,
+    .film:hover .przyciskKaruzela {
+        opacity: 1;
+    }
+
+    .filmImg {
+        transition: all 1s ease-in-out;
+        width: 270px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .tytulFilmu {
+        background-color: #333;
+        padding: 0 10px;
+        font-size: 32px;
+        font-weight: bold;
+        position: absolute;
+        top: 10%;
+        left: 50px;
+        opacity: 0;
+        transition: 1s all ease-in-out;
+    }
+
+    .opisFilmuKaruzela {
+        background-color: #333;
+        padding: 10px;
+        font-size: 14px;
+        position: absolute;
+        top: 30%;
+        left: 50px;
+        width: 230px;
+        opacity: 0;
+        transition: 1s all ease-in-out;
+    }
+
+    .przyciskKaruzela {
+        padding: 10px;
+        background-color: #c85fa6;
+        color: white;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        bottom: 20px;
+        left: 50px;
+        opacity: 0;
+        transition: 1s all ease-in-out;
+    }
+
+    .strzalka {
+        font-size: 120px;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        color: lightgray;
+        opacity: 0.5;
+        cursor: pointer;
+    }
