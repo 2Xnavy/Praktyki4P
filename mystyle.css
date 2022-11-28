@@ -513,7 +513,7 @@ main {
     }
 
     .resultList{
-        background-color: rgba(175, 175, 175, 0.25);
+        /*background-color: rgba(175, 175, 175, 0.25);*/
         position: relative;
         height: fit-content;
         width: 86%;
