@@ -5,3 +5,4 @@ Projekt konceptu strony w Figmie:
 Rezygnuje z:
 - zmiany ikon podczas uzywania kotwic
 - customowego wygladu selectow i optionow
+- powtórzenia pól filtrowania po wyszukaniu wyników
