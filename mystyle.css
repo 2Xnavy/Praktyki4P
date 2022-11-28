@@ -18,6 +18,12 @@ p {
     padding: 0%;
 }
 
+a, a:hover, a:visited {
+    text-decoration: none;
+    font-family: InterLight;
+    color: white;
+}
+
 .searchButton {
     position: fixed;
     z-index: 10;
@@ -299,3 +305,14 @@ main {
         opacity: 0.5;
         cursor: pointer;
     }
+
+    
+/* Poniżej dodaje własne fonty z folderu 'fonts': */
+@font-face {
+    font-family: InterLight;
+    src: url(fonts/Inter-Light.ttf);
+}
+@font-face {
+    font-family: IMFell;
+    src: url(fonts/IMFellGreatPrimerSC-Regular.ttf);
+}
