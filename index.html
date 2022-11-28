@@ -8,27 +8,106 @@
     <title>Movie Design</title>
     <link rel="stylesheet" href="mystyle.css">
     <script src="myscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script> // Skrypt na płynne scrollowanie dla kotwic
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                scrollTop: $(hash).offset().top
+                }, 800, function(){
+                window.location.hash = hash;
+                });
+            }
+            });
+        });
+    </script>
 </head>
 
-<body>
+<body id="topOfSite">
     <!-- Ikona otwierająca panel wyszukiwarki -->
-    <img class="searchButton" src="images/search.png">
+    <img class="searchButton" src="images/search.png" onclick="showSearchView(), disableScrolling()">
+    <div class="searchView">
+        <img class="searchViewClose" src="images/errorW.png" onclick="hideSearchView(), enableScrolling()">
+
+        <p class="searchingTitle">SEARCHING</p>
+        <input type="text" class="searchingSomeTitle" placeholder="Search some titles...">
+        <a href="searchingResults.html"><img src="images/searchNoBg.png" class="searchingBarIcon"></a>
+
+        <div class="filteringBox">
+            <p class="filteringTitle">FILTERING</p>
+
+            <p class="filterOption">RATING: </p>
+            <p class="filterOption">GENRE: </p>
+            <p class="filterOption">TYPE: </p>
+            <p class="filterOption">DIRECTOR: </p>
+            <p class="filterOption">RELEASE YEAR: </p>
+            <p class="filterOption">REVIEWS: </p>
+            <p class="filterOption">ADDED SINCE: </p>
+
+            <div class="filterOptionsInputs">
+                <div class="filterRating">
+                    <div class="ratingMinStars">
+                        <img src="images/starW.png">
+                        <img src="images/starW.png">
+                        <img src="images/starW.png">
+                        <img src="images/starW.png">
+                        <img src="images/starW.png">
+                    </div>
+                    <p class="filterSeparator">-</p>
+                    <div class="ratingMaxStars">
+                        <img src="images/starW.png">
+                        <img src="images/starW.png">
+                        <img src="images/starW.png">
+                        <img src="images/starW.png">
+                        <img src="images/starW.png">
+                    </div>
+                </div>
+
+                <select class="filterGenre">
+                    <option value="0">PLACEHOLDER</option>
+                </select>
+
+                <select class="filterType">
+                    <option value="0">PLACEHOLDER</option>
+                </select>
+
+                <select class="filterDirector">
+                    <option value="0">PLACEHOLDER</option>
+                </select>
+
+                <div class="filterReleaseYear">
+                    <input type="text" class="filterInputText">
+                    <p class="filterSeparator">-</p>
+                    <input type="text" class="filterInputText">
+                </div>
+
+                <div class="filterReviews">
+                    <input type="text" class="filterInputText">
+                    <p class="filterSeparator">-</p>
+                    <input type="text" class="filterInputText">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--lewe menu, ikony pobrane ze stronki fontawesome, można je zmienić-->
     <nav>
-        <img class="menuLogo" src="images/original.png">
-
-        <img class="menuIcon" src="images/houseW.png">
+        <a href="index.html"><img class="menuLogo" src="images/original.png"></a>
+        
+        <a href="index.html"><img class="menuIcon" src="images/houseW.png"></a>
         <img class="menuIcon" src="images/trending-topicW.png">
         <img class="menuIcon" src="images/video-libraryW.png">
         <img class="menuIcon" src="images/plusW.png">
 
-        <img class="socialMediaIcon" src="images/twitterW.png">
-        <img class="socialMediaIcon" src="images/discordW.png">
+        <a href="PLACEHOLDER"><img class="socialMediaIcon" src="images/twitterW.png"></a>
+        <a href="PLACEHOLDER"><img class="socialMediaIcon" src="images/discordW.png"></a>
     </nav>
 
     <!-- Część strony 'home' -->
-    <main>
+    <div class="mainDiv">
         <div class="homeBackground">
             <img class="hotShowIcon" src="images/burnIDK.png">
             <p class="hotShowText">HOT SHOW</p>
@@ -239,6 +318,6 @@
             </div>
         </div>
 
-        </main>
+    </div>
         </body>
         </html>
