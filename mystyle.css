@@ -33,6 +33,161 @@ a, a:hover, a:visited {
     height: auto;
     opacity: 80%;
 }
+.searchView{
+    z-index: 15;
+    position: fixed;
+    background-color: rgba(5, 5, 5, 0.5);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    /*display: none;*/
+}
+.searchViewClose{
+    position: fixed;
+    left: 92vw;
+    top: 7vh;
+    width: 2.8cm;
+    height: auto;
+    opacity: 80%;
+}
+.searchingTitle{
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -25%);
+    font-size: 1.8cm;
+}
+.searchingSomeTitle{
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    transform: translate(-50%, -33%);
+    width: 50%;
+    height: 6%;
+    border-radius: 2cm;
+    text-align: center;
+    font-size: 1cm;
+    padding: 0px 4cm 0px 4cm;
+}
+.searchingSomeTitle::placeholder{
+    font-family: InterLight;
+}
+input:focus, textarea:focus, select:focus{
+    outline-width: none;
+    outline: none;
+}
+.searchingBarIcon{
+    width: 2.3cm;
+    height: auto;
+    position: absolute;
+    left: 77.3%;
+    top: 30.3%;
+}
+
+.filteringBox{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 64%;
+    height: 47%;
+    position: absolute;
+    left: 50%;
+    top: 73%;
+    transform: translate(-50%, -73%);
+    border-radius: 1.2cm;
+}
+.filteringTitle{
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50%, -2%);
+    font-size: 1.3cm;
+}
+.filterOption{
+    position: relative;
+    display: flex;
+    margin-top: 0.6cm;
+    font-size: 1cm;
+    left: 1cm;
+    top: 10.5%;
+    transform: translateY(-10.5%);
+}
+
+.filterOptionsInputs{
+    position: absolute;
+    left: 9cm;
+    top: 66%;
+    transform: translateY(-66%);
+    /*background-color: rgb(230, 14, 14);*/
+    width: 72%;
+    height: 80%;
+}
+.filterRating{
+    display: inline-flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ratingMinStars img, .ratingMaxStars img{
+    width: 1.2cm;
+    height: auto;
+    margin: 0px 0.6315cm 0px 0.6315cm;
+}
+.filterSeparator{
+    font-size: 1cm;
+}
+
+.filterGenre, .filterType, .filterDirector{
+    position: relative;
+    left: 50%;
+    top: 4%;
+    transform: translate(-50%, -4%);
+    width: 96%;
+    height: 11%;
+    border-radius: 1cm;
+    padding: 0px 0.5cm 0px 0.5cm;
+    text-align: center;
+    -webkit-appearance: none;
+    font-size: 0.8cm;
+}
+
+.filterType{
+    top: 8%;
+}
+
+.filterDirector{
+    top: 12%;
+}
+
+.filterReleaseYear{
+    display: inline-flex;
+    position: relative;
+    left: 0.6cm;
+    top: 16.5%;
+    transform: translateY(-16.5%);
+    width: 100%;
+    height: 11.5%;
+}
+
+.filterReviews{
+    display: inline-flex;
+    position: relative;
+    left: 0.6cm;
+    top: 20.5%;
+    transform: translateY(-20.5%);
+    width: 100%;
+    height: 11.5%;
+}
+
+.filterInputText{
+    width: 45%;
+    text-align: center;
+    border-radius: 2cm;
+    font-size: 0.8cm;
+}
+
+.filterReleaseYear .filterSeparator, .filterReviews .filterSeparator{
+    margin: 0px 0.3cm 0px 0.3cm;
+}
 
 /* Sekcja z menu strony */
 nav {
@@ -193,7 +348,7 @@ main {
 }
 
 
-
+/*
 
     .przyciskglowny {
         background-color: #c85fa6;
@@ -306,7 +461,7 @@ main {
         cursor: pointer;
     }
 
-    
+    */
 /* Poniżej dodaje własne fonty z folderu 'fonts': */
 @font-face {
     font-family: InterLight;
