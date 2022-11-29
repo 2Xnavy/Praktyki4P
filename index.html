@@ -26,7 +26,7 @@
     </script>
 </head>
 
-<body id="topOfSite">
+<body id="topOfSite" onload="popularMovies()">
     <!-- Ikona otwierająca panel wyszukiwarki -->
     <img class="searchButton" src="images/search.png" onclick="showSearchView(), disableScrolling()">
     <div class="searchView">
@@ -34,7 +34,7 @@
 
         <p class="searchingTitle">SEARCHING</p>
         <input type="text" class="searchingSomeTitle" placeholder="Search some titles...">
-        <a href="searchingResults.html"><img src="images/searchNoBg.png" class="searchingBarIcon"></a>
+        <a href="searchingResults.html"><img src="images/searchNoBg.png" class="searchingBarIcon" onclick="searchingTitle()"></a>
 
         <div class="filteringBox">
             <p class="filteringTitle">FILTERING</p>
@@ -97,10 +97,10 @@
     <nav>
         <a href="index.html"><img class="menuLogo" src="images/original.png"></a>
         
-        <a href="index.html"><img class="menuIcon" src="images/houseW.png"></a>
-        <img class="menuIcon" src="images/trending-topicW.png">
-        <img class="menuIcon" src="images/video-libraryW.png">
-        <img class="menuIcon" src="images/plusW.png">
+        <a href="#topOfSite"><img class="menuIcon" src="images/houseW.png"></a>
+        <a href="#trendySection"><img class="menuIcon" src="images/trending-topicW.png"></a>
+        <a href="#topOfSite"><img class="menuIcon" src="images/video-libraryW.png"></a>
+        <a href="#topOfSite"><img class="menuIcon" src="images/plusW.png"></a>
 
         <a href="PLACEHOLDER"><img class="socialMediaIcon" src="images/twitterW.png"></a>
         <a href="PLACEHOLDER"><img class="socialMediaIcon" src="images/discordW.png"></a>
@@ -132,7 +132,7 @@
             <p class="hotShowRatingText">( 2.01M Reviews )</p>
             <a href="PLACEHOLDER"><p><span class="hotShowReadMore">READ MORE</span></p></a>
         </div>
-
+<!--
         <div class="karuzelaFilmow1">
             <h1 class="kategoriaFilmow">POPULARNE</h1>
             <div class="opakowanie">
@@ -317,7 +317,14 @@
                 <i class="fas fa-chevron-right strzalka"></i>
             </div>
         </div>
+    -->
+        <p id="trendySection"></p>
+        <p class="popularTitlesTitle">TRENDING TITLES:</p>
+        <div class="popularMoviesSection"></div>
+
 
     </div>
+
+
         </body>
         </html>

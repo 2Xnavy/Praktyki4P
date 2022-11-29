@@ -26,7 +26,7 @@
     </script>
 </head>
 
-<body id="topOfSite">
+<body id="topOfSite" onload="searchedTitles()">
     <!-- Ikona otwierająca panel wyszukiwarki -->
     <img class="searchButton" src="images/search.png" onclick="showSearchView(), disableScrolling()">
     <div class="searchView">
@@ -34,7 +34,7 @@
 
         <p class="searchingTitle">SEARCHING</p>
         <input type="text" class="searchingSomeTitle" placeholder="Search some titles...">
-        <a href="searchingResults.html"><img src="images/searchNoBg.png" class="searchingBarIcon"></a>
+        <a href="searchingResults.html"><img src="images/searchNoBg.png" class="searchingBarIcon" onclick="searchingTitle()"></a>
 
         <div class="filteringBox">
             <p class="filteringTitle">FILTERING</p>
@@ -98,9 +98,9 @@
         <a href="index.html"><img class="menuLogo" src="images/original.png"></a>
         
         <a href="index.html"><img class="menuIcon" src="images/houseW.png"></a>
-        <img class="menuIcon" src="images/trending-topicW.png">
-        <img class="menuIcon" src="images/video-libraryW.png">
-        <img class="menuIcon" src="images/plusW.png">
+        <a href="index.html"><img class="menuIcon" src="images/trending-topicW.png"></a>
+        <a href="index.html"><img class="menuIcon" src="images/video-libraryW.png"></a>
+        <a href="index.html"><img class="menuIcon" src="images/plusW.png"></a>
 
         <a href="PLACEHOLDER"><img class="socialMediaIcon" src="images/twitterW.png"></a>
         <a href="PLACEHOLDER"><img class="socialMediaIcon" src="images/discordW.png"></a>
@@ -122,6 +122,7 @@
             <div class="resultList">
                 
             </div>
+
             <div class="seeMoreLine" onclick="showFilteredResults()">
                 <img class="seeMoreImage" src="images/view.png">
                 <p class="seeMoreText">SEE MORE</p>
